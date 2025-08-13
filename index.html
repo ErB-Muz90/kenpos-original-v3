@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/icons/icon-72x72.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KenPOS™ - Point of Sale</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Tailwind config for dark mode
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#10B981',
+              accent: '#059669',
+              warning: '#F59E0B',
+              danger: '#EF4444',
+              background: '#F8FAFC',
+              foreground: '#0F172A',
+              card: '#FFFFFF',
+              border: '#E2E8F0',
+              
+              'dark-primary': '#34D399',
+              'dark-accent': '#10B981',
+              'dark-background': '#020617',
+              'dark-card': '#1E293B',
+              'dark-foreground': '#F8FAFC',
+              'dark-border': '#334155',
+            }
+          }
+        }
+      }
+    </script>
+
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#020617" media="(prefers-color-scheme: dark)">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="KenPOS™">
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+    
+    <style>
+      /* Custom scrollbar for a more modern look */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      .dark ::-webkit-scrollbar-track {
+        background: #1E293B;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #D1D5DB;
+        border-radius: 4px;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #334155;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #a0aec0;
+      }
+       .dark ::-webkit-scrollbar-thumb:hover {
+        background: #4A5568;
+      }
+
+      @media print {
+        body * {
+          visibility: hidden;
+        }
+        #pdf-content-wrapper, #pdf-content-wrapper * {
+          visibility: visible;
+        }
+        #pdf-content-wrapper {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+        }
+        #receipt-container, #receipt-container * {
+          visibility: visible;
+        }
+        #receipt-container {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+        }
+        #shift-report-container, #shift-report-container * {
+          visibility: visible;
+        }
+        #shift-report-container {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+        }
+        #barcode-to-print, #barcode-to-print * {
+            visibility: visible;
+        }
+        #barcode-to-print {
+            position: absolute;
+            left: 50%;
+            top: 10px;
+            transform: translateX(-50%);
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "recharts": "https://esm.sh/recharts@^3.1.0",
+    "framer-motion": "https://esm.sh/framer-motion@^11.3.19",
+    "qrcode": "https://esm.sh/qrcode@^1.5.3",
+    "jspdf": "https://esm.sh/jspdf@^2.5.1",
+    "html2canvas": "https://esm.sh/html2canvas@^1.4.1",
+    "jsbarcode": "https://esm.sh/jsbarcode@^3.11.5",
+    "next": "https://esm.sh/next@^15.4.5"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-background dark:bg-dark-background antialiased overflow-hidden">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

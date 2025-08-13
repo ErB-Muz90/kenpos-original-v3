@@ -1,0 +1,20 @@
+{
+  "name": "kenpos-react",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A responsive, offline-capable, web-based Point of Sale (POS) system.",
+  "scripts": {
+    "dev": "echo \"This is a static React project. Use a simple HTTP server to run.\"",
+    "build": "echo \"No build step needed.\"",
+    "start": "echo \"Please use a local server to serve index.html.\"",
+    "lint": "echo \"ESLint not configured for static project.\""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@types/qrcode": "^1.5.5",
+    "@types/jsbarcode": "^3.11.4"
+  }
+}

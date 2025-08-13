@@ -1,0 +1,12 @@
+# Netlify configuration file
+
+[build]
+  # This is the directory that contains the built site.
+  publish = "."
+
+# Redirect rule for Single Page Applications (SPAs) like React, Vue, or Angular.
+# This ensures that all routes are handled by your index.html file.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status
