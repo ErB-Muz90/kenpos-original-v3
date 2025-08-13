@@ -5,7 +5,7 @@
   "description": "A responsive, offline-capable, web-based Point of Sale (POS) system.",
   "scripts": {
     "dev": "echo \"This is a static React project. Use a simple HTTP server to run.\"",
-    "build": "echo \"No build step needed.\"",
+    "build": "mkdir -p dist/client && rsync -av --exclude='dist' --exclude='.git' ./ dist/client/",
     "start": "echo \"Please use a local server to serve index.html.\"",
     "lint": "echo \"ESLint not configured for static project.\""
   },

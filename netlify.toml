@@ -4,7 +4,7 @@
   # This command is run to build your site.
   command = "npm run build"
   # This is the directory that contains the built site.
-  publish = "."
+  publish = "dist/client"
 
 # Redirect rule for Single Page Applications (SPAs) like React, Vue, or Angular.
 # This ensures that all routes are handled by your index.html file.
